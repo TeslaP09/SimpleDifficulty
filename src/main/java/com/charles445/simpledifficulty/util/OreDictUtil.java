@@ -11,6 +11,7 @@ public class OreDictUtil
 	public static final NonNullList<ItemStack> listAlljuice = OreDictionary.getOres("listAlljuice");
 	public static final NonNullList<ItemStack> listAllsmoothie = OreDictionary.getOres("listAllsmoothie");
 	public static final NonNullList<ItemStack> listAllsoda = OreDictionary.getOres("listAllsoda");
+	public static final NonNullList<ItemStack> listAllfruit = OreDictionary.getOres("listAllfruit");
 	
 	public static final NonNullList<ItemStack> logWood = OreDictionary.getOres("logWood");
 	public static final NonNullList<ItemStack> stick = OreDictionary.getOres("stickWood");

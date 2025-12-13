@@ -104,6 +104,13 @@ public class JsonCompatDefaults
 				addDrink(loc.toString(), 9, 7.0f);
 			}
 		}
+
+		//Some new stuff
+		for(ItemStack stack : OreDictUtil.listAllfruit)
+		{
+			ResourceLocation loc = stack.getItem().getRegistryName();
+			addDrink(loc.toString(), 1, 0.0f);
+		}
 		
 		//There's bound to be a typo in here somewhere
 		
