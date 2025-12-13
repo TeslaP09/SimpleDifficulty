@@ -28,6 +28,8 @@ public class JsonCompatDefaults
 		populateRustic();
 		populateSimpleCampfire();
 		populateTinkersConstruct();
+
+		populateDefault();
 	}
 	
 	public boolean populate(String modid)
@@ -43,12 +45,23 @@ public class JsonCompatDefaults
 			case RUSTIC: return populateRustic();
 			case SIMPLECAMPFIRE: return populateSimpleCampfire();
 			case TINKERSCONSTRUCT: return populateTinkersConstruct();
-		
-		
-			default: return false;
+
+			default: return populateDefault();
 		}
 	}
-	
+
+	//Default
+	private boolean populateDefault()
+	{
+		for(ItemStack stack : OreDictUtil.listAlljuice)
+		{
+			ResourceLocation loc = stack.getItem().getRegistryName();
+			addDrink(loc.toString(), 6, 5.0f);
+		}
+
+		return true;
+	}
+
 	//Baubles
 	private boolean populateBaubles()
 	{
