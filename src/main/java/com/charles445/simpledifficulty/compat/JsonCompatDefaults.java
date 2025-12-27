@@ -5,6 +5,7 @@ import com.charles445.simpledifficulty.api.config.JsonConfig;
 import com.charles445.simpledifficulty.api.config.json.JsonItemIdentity;
 import com.charles445.simpledifficulty.api.config.json.JsonPropertyTemperature;
 import com.charles445.simpledifficulty.api.config.json.JsonPropertyValue;
+import com.charles445.simpledifficulty.config.ModConfig;
 import com.charles445.simpledifficulty.util.CompatUtil;
 import com.charles445.simpledifficulty.util.OreDictUtil;
 import net.minecraft.item.ItemStack;
@@ -57,6 +58,30 @@ public class JsonCompatDefaults
 		{
 			ResourceLocation loc = stack.getItem().getRegistryName();
 			addDrink(loc.toString(), 6, 5.0f);
+		}
+
+		for (ItemStack stack : OreDictUtil.armorWarm)
+		{
+			ResourceLocation loc = stack.getItem().getRegistryName();
+			JsonConfig.registerArmorTemperature(loc.toString(), (float)ModConfig.server.temperature.armorWarmTemperature);
+		}
+
+		for (ItemStack stack : OreDictUtil.armorHot)
+		{
+			ResourceLocation loc = stack.getItem().getRegistryName();
+			JsonConfig.registerArmorTemperature(loc.toString(), (float)ModConfig.server.temperature.armorHotTemperature);
+		}
+
+		for (ItemStack stack : OreDictUtil.armorCold)
+		{
+			ResourceLocation loc = stack.getItem().getRegistryName();
+			JsonConfig.registerArmorTemperature(loc.toString(), (float)ModConfig.server.temperature.armorColdTemperature);
+		}
+
+		for (ItemStack stack : OreDictUtil.armorFreezing)
+		{
+			ResourceLocation loc = stack.getItem().getRegistryName();
+			JsonConfig.registerArmorTemperature(loc.toString(), (float)ModConfig.server.temperature.armorFreezingTemperature);
 		}
 
 		return true;

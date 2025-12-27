@@ -297,7 +297,30 @@ public class ModConfig
 			@Config.Name("TemperatureDamageDuration")
 			@Config.RangeInt(min=0)
 			public int temperatureDamageDuration = 400;
-			
+
+			@Config.Comment("ArmorWarmTemperature - The temperature that items with the oreDict tag armorWarm provide")
+			@Config.Name("ArmorWarmTemperature")
+			@Config.RequiresMcRestart
+			@Config.RangeDouble(min=-1000000, max=1000000)
+			public double armorWarmTemperature = 1.0;
+
+			@Config.Comment("ArmorHotTemperature - The temperature that items with the oreDict tag armorHot provide")
+			@Config.Name("ArmorHotTemperature")
+			@Config.RequiresMcRestart
+			@Config.RangeDouble(min=-1000000, max=1000000)
+			public double armorHotTemperature = 2.0;
+
+			@Config.Comment("ArmorColdTemperature - The temperature that items with the oreDict tag armorCold provide")
+			@Config.Name("ArmorColdTemperature")
+			@Config.RequiresMcRestart
+			@Config.RangeDouble(min=-1000000, max=1000000)
+			public double armorColdTemperature = -1.0;
+
+			@Config.Comment("ArmorFreezingTemperature - The temperature that items with the oreDict tag armorFreezing provide")
+			@Config.Name("ArmorFreezingTemperature")
+			@Config.RequiresMcRestart
+			@Config.RangeDouble(min=-1000000, max=1000000)
+			public double armorFreezingTemperature = -2.0;
 			
 		}
 		public class ConfigThirst

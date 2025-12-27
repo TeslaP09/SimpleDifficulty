@@ -15,7 +15,12 @@ public class OreDictUtil
 	
 	public static final NonNullList<ItemStack> logWood = OreDictionary.getOres("logWood");
 	public static final NonNullList<ItemStack> stick = OreDictionary.getOres("stickWood");
-	
+
+	public static final NonNullList<ItemStack> armorWarm = OreDictionary.getOres("armorWarm");
+	public static final NonNullList<ItemStack> armorHot = OreDictionary.getOres("armorHot");
+	public static final NonNullList<ItemStack> armorCold = OreDictionary.getOres("armorCold");
+	public static final NonNullList<ItemStack> armorFreezing = OreDictionary.getOres("armorFreezing");
+
 	public static boolean isOre(NonNullList<ItemStack> stackList, ItemStack stackCheck)
 	{
 		return OreDictUtil.containsMatch(false,stackList,stackCheck);
