@@ -294,10 +294,12 @@ public class JsonCompatDefaults
 		addDrink("rustic:elixir", 4, 0.4f);
 		
 		addDrink("rustic:fluid_bottle", 2, 0.1f, 0.9f, rusticFluid("oliveoil"));
+		addDrink("rustic:fluid_bottle", 2, 0.1f, 0.9f, rusticFluid("vantaoil"));
 		addDrink("rustic:fluid_bottle", 2, 8.0f, rusticFluid("ironberryjuice"));
 		addDrink("rustic:fluid_bottle", juiceThirst, juiceSaturation, rusticFluid("wildberryjuice"));
 		addDrink("rustic:fluid_bottle", juiceThirst, juiceSaturation, rusticFluid("grapejuice"));
 		addDrink("rustic:fluid_bottle", juiceThirst, juiceSaturation, rusticFluid("applejuice"));
+		addDrink("rustic:fluid_bottle", 20, 20.0f, rusticFluid("goldenapplejuice"));
 		addDrink("rustic:fluid_bottle", boozeThirst, boozeSaturation, boozeSickness, rusticFluid("alewort"));
 		//Rustic honey appears to be a lot safer to drink than actual honey
 		addDrink("rustic:fluid_bottle", 4, 3.0f, rusticFluid("honey"));
@@ -307,7 +309,8 @@ public class JsonCompatDefaults
 		addDrink("rustic:fluid_bottle", boozeThirst, boozeSaturation, boozeSickness, rusticFluid("mead"));
 		addDrink("rustic:fluid_bottle", boozeThirst, boozeSaturation, boozeSickness, rusticFluid("wildberrywine"));
 		addDrink("rustic:fluid_bottle", boozeThirst, boozeSaturation, boozeSickness, rusticFluid("wine"));
-		
+		addDrink("rustic:fluid_bottle", boozeThirst, boozeSaturation, boozeSickness, rusticFluid("ambrosia"));
+
 		
 		
 		return true;
